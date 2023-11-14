@@ -1,1 +1,1 @@
-# Angular Journey
+# Angular Course
