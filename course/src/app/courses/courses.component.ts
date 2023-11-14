@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CoursesService } from './courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
 
+  portal: string;
+  courses: string[];
+
+  constructor(private cursosService: CoursesService) { 
+    
+    this.portal = 'http://loiane.training'
+    this.courses = this.cursosService.getCourses();
+
+  }
 }
