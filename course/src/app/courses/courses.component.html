@@ -11,3 +11,41 @@
 		<strong>Warning!</strong> Better check yourself, you're not looking too good.
 	</ngb-alert>
 </p>
+
+<article>
+    <h3>Event binding</h3>
+    <div>
+		<!-- Calls the clickedButton method as soon as the button is clicked -->
+		<button (click)="clickedButton()"class="btn btn-primary">Click me!</button>
+		<br><br>
+
+		<!-- 
+		Calls the methods below as soon as the up and enter keys are pressed.
+		To reference the event as an argument, use $ .
+
+		In the last two methods, `inputField.value` was used. It is possible,
+		as it is allowed to use the declared local variable name as a reference.
+
+		About the Blur event: when the field loses focus (e.g. user clicked outside the
+		field), this event is identified and triggered.
+		-->
+		<input type="text"
+			(keyup)="onKeyUp($event)"
+			(keyup.enter)="saveValue(inputField.value)"
+			(blur)="saveValue(inputField.value)"
+			#inputField />
+
+		<br>
+		<p>Actual value: {{ actualValue }}</p>
+		<p>Saved value: {{ savedValue }}</p>
+
+		<br>
+		<span
+			(mouseover)="onMouseOverOut()"
+			(mouseout)="onMouseOverOut()"
+			[class.highlight]="isMouseOver"
+			>
+			Hover over me
+		</span>
+	</div>
+</article>
