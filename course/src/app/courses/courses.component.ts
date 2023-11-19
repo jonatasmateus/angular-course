@@ -13,6 +13,10 @@ export class CoursesComponent {
   actualValue: string = '';  // To show the value received in #inputField
   savedValue:string = '';  // To show the value entered or clicked outside from #inputField
   isMouseOver: boolean = false;
+  person:any = {
+    name: '',
+    age: 0,
+  }
 
   constructor(private cursosService: CoursesService) { 
     

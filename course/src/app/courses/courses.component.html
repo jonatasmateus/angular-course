@@ -49,3 +49,12 @@
 		</span>
 	</div>
 </article>
+<article>
+	<h3>Two-way data binding</h3>
+	<div>
+		<p>My name is {{ person.name }} and I have {{ person.age }} years old.</p>
+
+		<input type="text" [(ngModel)]="person.name">
+		<input type="text" [(ngModel)]="person.age">
+	</div>
+</article>
