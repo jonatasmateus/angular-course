@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
 
+  courses: string[] = ['Angular', 'Java', 'React'];
+  showCourses: boolean = false;
+
   constructor() { }
 
+  onShowCourses(){
+    this.showCourses = !this.showCourses;
+  }
 }

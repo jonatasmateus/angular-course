@@ -1,0 +1,13 @@
+<article class="container my-4">
+    <h3>ngIf</h3>
+
+    <div *ngIf="showCourses" >
+        List of courses:
+    </div>
+    <div *ngIf="!showCourses" >
+        There are not courses available to show.
+    </div>
+    
+    <br>
+    <button class="btn btn-primary" (click)="onShowCourses()">Show or hidden courses</button>
+</article>
