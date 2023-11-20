@@ -17,6 +17,8 @@ export class CoursesComponent {
     name: '',
     age: 0,
   }
+  courseName: string = 'Angular';
+  initialValue: number = 15;
 
   constructor(private cursosService: CoursesService) { 
     
@@ -45,5 +47,9 @@ export class CoursesComponent {
 
 	onMouseOverOut(){
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onChangeValue(event: any){
+    console.log(event.newValue);
   }
 }

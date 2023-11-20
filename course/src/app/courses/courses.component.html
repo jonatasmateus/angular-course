@@ -58,3 +58,13 @@
 		<input type="text" [(ngModel)]="person.age">
 	</div>
 </article>
+<article>
+    <h3>Input/Output Properties</h3>
+
+    <app-input-property [courseName]="courseName"></app-input-property>
+
+    <app-output-property 
+		[value]="initialValue"
+      	(changeValue)="onChangeValue($event)"
+    ></app-output-property>
+</article>
